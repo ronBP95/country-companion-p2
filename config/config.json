@@ -1,6 +1,8 @@
 {
   "development": {
-    "database": "express_auth_dev",
+    "username": "1234",
+    "password": "1234",
+    "database": "countries",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
