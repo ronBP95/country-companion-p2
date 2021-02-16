@@ -1,6 +1,7 @@
-# Express Authentication
+<!-- # Country Companion
 
-Express authentication template using Passport + flash messages + custom middleware
+Based on RESTFUL api via:
+https://restcountries.eu/ 
 
 ## What it includes
 
@@ -104,4 +105,22 @@ or
 
 ```
 node index.js
-```
+``` -->
+
+### Country Companion
+
+Country Companion is an express app that is going to be based on the restcountries.eu api and will display a number of datapoints for users.
+
+- Non-members will be able to:
+    - view the homepage
+    - click the signup button
+    - click the login button
+    - view randomized information that is displayed in the footer and center of the homepage
+
+- Signed up users will be able to:
+    - display several datapoints including country name, image, currency etc.
+    - be able to comment and display their username from the posting section
+
+- Webpages and routes are illustrated by the png files in the asset folder for Project two.
+
+- More information to come!
