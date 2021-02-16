@@ -28,7 +28,7 @@ app.use(ejsLayouts);
 
 // to be changed to res.render('index'); when the api/db is linked
 app.get('/', (req, res)=> {
-  res.send("This is the homepage");
+  res.render("index");
 })
 
 // Server Hosting
