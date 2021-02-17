@@ -23,7 +23,7 @@ app.use(ejsLayouts);
 // Session Middleware to be added later alongside passport
 
 // Controllers
-// app.use('/auth', require('./controllers/auth')) // controller not added yet
+app.use('/auth', require('./controllers/auth')) // controller not added yet
 
 
 // to be changed to res.render('index'); when the api/db is linked

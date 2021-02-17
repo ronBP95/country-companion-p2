@@ -7,13 +7,15 @@
   <title>Home Page</title>
 </head>
 <body>
-  <nav>
-    <a href="/">home</a>
-    <a href="/">signup</a>
-    <a href="/">login</a>
-  </nav>
-  <main>
-    <%- body %>
-  </main>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/auth/signup">signup</a></li>
+        <li><a href="/auth/login">login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <%- body %>
 </body>
 </html>
