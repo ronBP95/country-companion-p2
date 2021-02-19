@@ -3,6 +3,14 @@ nav ul li {
   display: inline-block
 }
 
+.center {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
 nav {
   background-color: blanchedalmond;
 }
