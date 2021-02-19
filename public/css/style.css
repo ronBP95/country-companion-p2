@@ -1,8 +1,6 @@
 nav ul li {
   text-decoration: none;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: row;
+  display: inline-block
 }
 
 nav {

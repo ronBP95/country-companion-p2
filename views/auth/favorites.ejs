@@ -1,1 +1,19 @@
 <h2>This is the favorites page</h2>
+
+<form method="POST" action="/favorites">
+    <label for="addFave">Add Favorite Country</label>
+    <input id="addFave" type="text" name="addFave">
+    <input type="submit">
+  </form>
+
+  <form method="PUT" action="/favorites">
+    <label for="editFave">Edit/Change Favorite Country</label>
+    <input id="editFave" type="text" name="editFave">
+    <input type="submit">
+  </form>
+
+<form method="delete" action="/favorites">
+    <label for="delFave">Delete Favorite Country</label>
+    <input id="delFave" type="text" name="delFave">
+    <input type="submit">
+  </form>
