@@ -6,6 +6,7 @@ const ejsLayouts = require('express-ejs-layouts')
 const session = require('express-session')
 const passport = require('./config/ppConfig');
 const flash = require('connect-flash')
+const weather = require("weather-js")
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -53,6 +54,16 @@ app.use('/auth', require('./controllers/auth'))
 app.get('/', (req, res)=> {
   res.render("index");
 });
+
+// as referenced in express-weather-lab for SEI-111
+app.get("/weather", (req, res) => {
+  weather.find({search: req.query.zipcode, degreeType: 'F'}, function(err, result) {
+          if(err) console.log(err);
+         
+          console.log(JSON.stringify(result, null, 2));
+          res.render("weatherModule.ejs", { result })
+        });
+})
 
 app.get('/about', (req, res)=> {
   res.render("about");

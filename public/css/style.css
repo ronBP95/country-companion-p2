@@ -11,6 +11,10 @@ nav ul li {
   justify-content: center;
 }
 
+.about {
+  margin-left: 1.5em;
+}
+
 nav {
   background-color: blanchedalmond;
 }
