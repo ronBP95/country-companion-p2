@@ -16,7 +16,7 @@ router.get('/login', (req, res) => {
 // Post Route for creating user
 router.post('/signup', (req, res) => {
     // we now have access to the user info (req.body);
-    // console.log(req.body);
+    console.log(req.body);
     const { email, name, password } = req.body; // goes and us access to whatever key/value inside of the object (req.body)
     db.user.findOrCreate({
       where: { email },
