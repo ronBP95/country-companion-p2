@@ -17,6 +17,10 @@ router.get('/favorites', (req,res) => {
     res.render('auth/favorites')
 })
 
+router.get('/search', (req, res) => {
+    res.render('auth/search')
+})
+
 router.get('/logout', (req, res) => {
   req.logOut(); // logs the user out of the session
   req.flash('success', 'Logging out... See you next time!');
