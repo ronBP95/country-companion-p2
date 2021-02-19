@@ -1,9 +1,17 @@
 nav ul li {
-    text-decoration: none;
-    display: inline-block;
-    margin-right: .3em;
-  }
-  
-  h1 {
-    color: chartreuse;
-  }
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+nav {
+  background-color: blanchedalmond;
+}
+
+h1 {
+  color: blue;
+  display: flex;
+  justify-content: left;
+  margin-left: 0.5em;
+}

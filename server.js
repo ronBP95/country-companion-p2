@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 
 // Session
 const SECRET_SESSION = process.env.SECRET_SESSION; 
-// const isLoggedin = require('./middleware/isLoggedIn'); not ready for use yet
+const isLoggedIn = require('./middleware/isLoggedIn');
 
 // Middleware
 app.use(require('morgan')('dev'))
@@ -52,7 +52,13 @@ app.use('/auth', require('./controllers/auth'))
 
 app.get('/', (req, res)=> {
   res.render("index");
-})
+});
+
+app.get('/profile', isLoggedIn, (req, res) => {
+  const { id, name, email } = req.user.get(); 
+  res.render('profile', { id, name, email });
+});
+
 
 // Server Hosting
 
