@@ -23,7 +23,7 @@ router.get('/search', (req, res) => {
 
 router.get('/logout', (req, res) => {
   req.logOut(); // logs the user out of the session
-  req.flash('success', 'Logging out... See you next time!');
+  req.flash('success', 'You have logged out! See you again soon!');
   res.redirect('/');
 });
 
@@ -64,7 +64,7 @@ router.post('/signup', (req, res) => {
   router.post('/login', passport.authenticate('local', {
     successRedirect: '/',
     failureRedirect: '/auth/login',
-    successFlash: 'Welcome back!',
+    successFlash: 'Success! You have logged in!',
     failureFlash: 'Either email or password is incorrect' 
   }));
 
