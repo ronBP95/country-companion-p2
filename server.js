@@ -55,6 +55,9 @@ app.get('/', (req, res)=> {
   res.render("index");
 });
 
+app.get('/weatherView', (req, res)=> {
+  res.render("weatherView");
+});
 // as referenced in express-weather-lab for SEI-111
 app.get("/weather", (req, res) => {
   weather.find({search: req.query.zipcode, degreeType: 'F'}, function(err, result) {
