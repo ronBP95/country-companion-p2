@@ -1,3 +1,23 @@
+.indexpage {
+  display: flex;
+  justify-content: center;
+}
+
+.bg {
+  background-color: beige;
+}
+
+/* .page {
+  background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg');
+  width: 3000px;
+  height: 3000px;
+} */
+
+#country {
+  width: 500px;
+  height: 350px;
+}
+
 .nolog {
   list-style-type: none;
   text-decoration: none;
@@ -20,6 +40,7 @@
   width: 500px;
   margin-left: 930px;
 }
+
 
 
 .center {
