@@ -1,11 +1,13 @@
 <h1>Country Companion</h1>
 <div class="center">
 <h2>This is the Search Page</h2>
+  <label for="url">Enter the name of the country after https://restcountries.eu/rest/v2/name/usa</label>
 
-<h4>This is where we will include the input field and return country data</h4>
-<form method="POST" action="/favorites">
-    <label for="addFave">Add Favorite Country</label>
-    <input id="addFave" type="text" name="addFave">
-    <input type="submit">
-  </form>
+  <input type="url" name="url" id="url" 
+       placeholder="https://restcountries.eu/rest/v2/name/usa"
+       pattern="https://.*" size="30"
+       required
+       button=>
+  <input type="submit" value="Send Data">
 </div>
+

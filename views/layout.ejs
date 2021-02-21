@@ -12,26 +12,25 @@
   <%- include('partials/alerts') %>
   <header>
     <nav>
-      <ul>
-        <!-- <li><a href="/">home</a></li>
-        <li><a href="/auth/signup">signup</a></li>
-        <li><a href="/auth/login">login</a></li>
-      </ul> -->
       <% if (!currentUser) {%>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/weatherView">Weather</a></li>
-        <li><a href="/auth/signup">Signup</a></li>
-        <li><a href="/auth/login">Login</a></li>
+        <div class="nolog">
+        <li class="items1"><a href="/">Home</a></li>
+        <li class="items1"><a href="/about">About</a></li>
+        <li class="items1"><a href="/weatherView">Weather</a></li>
+        <li class="items1"><a href="/auth/signup">Signup</a></li>
+        <li class="items1"><a href="/auth/login">Login</a></li>
+        </div>
         
       <% } else { %>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/weatherView">Weather</a></li>
-        <li><a href="/auth/favorites">Favorites</a></li>
-        <li><a href="/auth/search">Search</a></li>
-        <li><a href="/profile">Account</a></li>
-        <li><a href="/auth/logout">Logout</a></li>
+        <div class="logged">
+        <li class="items2"><a href="/">Home</a></li>
+        <li class="items2"><a href="/about">About</a></li>
+        <li class="items2"><a href="/weatherView">Weather</a></li>
+        <li class="items2"><a href="/auth/favorites">Favorites</a></li>
+        <li class="items2"><a href="/auth/search">Search</a></li>
+        <li class="items2"><a href="/profile">Account</a></li>
+        <li class="items2"><a href="/auth/logout">Logout</a></li>
+      </div>
       <% } %>
     </nav>
   </header>

@@ -1,7 +1,26 @@
-nav ul li {
+.nolog {
+  list-style-type: none;
   text-decoration: none;
-  display: inline-block
+  font-family: monospace;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 350px;
+  margin-left: 1100px;
 }
+
+.logged {
+  list-style-type: none;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 500px;
+  margin-left: 930px;
+}
+
 
 .center {
   margin-top: 2em;
@@ -9,6 +28,28 @@ nav ul li {
   flex-direction: column;
   text-align: center;
   justify-content: center;
+}
+
+.input1 {
+  margin-top: 7em;
+  margin-left: 9px;
+}
+
+.input2 {
+  margin-left: 5px;
+}
+
+.input3 {
+  margin-right: 20px;
+}
+
+.input4 {
+  margin-right: 20px;
+}
+
+.login {
+  margin-top: 10px;
+  margin-left: 50px;
 }
 
 .about {
@@ -20,8 +61,10 @@ nav {
 }
 
 h1 {
-  color: blue;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   margin-left: 0.5em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: monospace;
 }
