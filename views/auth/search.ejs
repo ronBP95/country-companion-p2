@@ -1,15 +1,26 @@
 <body class="bg">
+<head>
+  <title>Rest Countries API</title>
+</head>
 <h1>Country Companion</h1>
 <div class="center">
 <h2>This is the Search Page</h2>
-  <label for="url">Enter the name of the country after https://restcountries.eu/rest/v2/name/usa</label>
-
-  <input type="url" name="url" id="url" 
-       placeholder="https://restcountries.eu/rest/v2/name/usa"
-       pattern="https://.*" size="30"
-       required
-       button=>
-  <input type="submit" value="Send Data">
+<div id="main-container">
+  <div id="flag-container">
+    <img src="" alt="">
+  </div>
+</div>
+  <div id="info-container">
+    <select id="countries">
+      <option value="a">A</option>
+      <option value="b">B</option>
+      <option value="c">C</option>
+    </select>
+    <p>Capital: <span id="capital"></span></p>
+    <p>Dialing Code: <span id="dialing-code"></span></p>
+    <p>Population: <span id="population"></span></p>
+    <p>Currencies: <span id="currencies"></span></p>
+  </div>
 </div>
 </body>
 
