@@ -31,6 +31,45 @@ router.get('/logout', (req, res) => {
   res.redirect('/');
 });
 
+router.get('/favorites', (req, res) => {
+  const {name} = req.favorite.get();
+  res.render('favorite', {name});
+})
+
+// Post Route for creating favorite
+router.post('/favorites', (req, res) => {
+  // we now have access to the user info (req.body);
+  console.log(req.body);
+  const { name } = req.body; // goes and us access to whatever key/value inside of the object (req.body)
+  db.favorite.findOrCreate({
+    where: { name },
+  })
+  .then(([favorite, created]) => {
+    if (created) {
+      // if created, success and we will redirect back to / page
+      console.log(`${favorite.name} was added....`);
+      // flash messages
+      const successObject = {
+        successRedirect: '/favorites',
+        successFlash: `Your favorite country ${favorite.name} was added to the list! `
+      }
+      // passport authenicate
+      passport.authenticate('local', successObject)(req, res);
+    } else {
+      // Send back email already exists
+      req.flash('error', 'Email already exists');
+      res.redirect('/auth/signup');
+    }
+  })
+  .catch(error => {
+    console.log('**************Error');
+    console.log(error);
+    req.flash('error', 'Either email or password is incorrect. Please try again.');
+    res.redirect('/auth/signup');
+  });
+});
+
+
 // Post Route for creating user
 router.post('/signup', (req, res) => {
     // we now have access to the user info (req.body);
