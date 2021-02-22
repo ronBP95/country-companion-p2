@@ -42,30 +42,14 @@ router.post('/favorites', (req, res) => {
   console.log(req.body);
   const { name } = req.body; // goes and us access to whatever key/value inside of the object (req.body)
   db.favorite.findOrCreate({
-    where: { name },
-  })
-  .then(([favorite, created]) => {
+    where: { name }
+  }).then(([favorite, created]) => {
     if (created) {
-      // if created, success and we will redirect back to / page
-      console.log(`${favorite.name} was added....`);
-      // flash messages
-      const successObject = {
-        successRedirect: '/favorites',
-        successFlash: `Your favorite country ${favorite.name} was added to the list! `
-      }
-      // passport authenicate
-      passport.authenticate('local', successObject)(req, res);
+      console.log(`${favorite.name} was created....`)
     } else {
-      // Send back email already exists
-      req.flash('error', 'Email already exists');
-      res.redirect('/auth/signup');
+      req.flash('error', 'Favorite already exists');
+      res.redirect('/auth/favorites')
     }
-  })
-  .catch(error => {
-    console.log('**************Error');
-    console.log(error);
-    req.flash('error', 'Either email or password is incorrect. Please try again.');
-    res.redirect('/auth/signup');
   });
 });
 
