@@ -6,11 +6,17 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="bg">
     <h1>Country Companion</h1>
     <div class="center">
-    <h2>City: <%= result[0].location.name %></h1>
-    <h3>Temperature: <%= result[0].current.temperature %></h2>
+    <img class="woo" src="https://s.yimg.com/uu/api/res/1.2/2Pf4ZQZzf2jFgw6f0eR0pg--~B/aD00MjA7dz02MjA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/tvline.com/93fb25cec53ba5424e771603259bb3b7">
+    <h3>I'm Jimmy Woo, and here is the weather data for your area:</h3>
+    <h5>City: <%= result[0].location.name %></h5>
+    <h5>Temperature: <%= result[0].current.temperature %></h5>
+    <h5>Skytext: <%= result[0].current.skytext %></h5>
+    <h5>Date: <%= result[0].current.date %></h5>
+    <h5>Humidity: <%= result[0].current.humidity %></h5>
+    <h5>Wind: <%= result[0].current.winddisplay %></h5>
     </div>
 </body>
 </html>

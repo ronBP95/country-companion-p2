@@ -1,7 +1,7 @@
-<h1>Country Companion</h1>
 
+<h1>Country Companion</h1>
 <div class="center">
-<h2>This is the weather api page</h2>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +10,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Express Weather Lab</title>
 </head>
-<body>
+
+<body class="bg">
+<h2>What's the Weather?</h2>
+<div>
     <h4>Type in the zipcode and click submit for weather information</h4>
+    <h6>Note: Only works for US and European postal codes at the moment!</h6>
     <form method ="GET" action="/weather">
         <input type="text" name="zipcode"/>
         <input type="submit" />
     </form>    
-</body>
 </div>
+</div>
+</body>
 </html>

@@ -1,6 +1,10 @@
 .indexpage {
   display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .bg {
@@ -27,7 +31,7 @@
   justify-content: space-between;
   align-items: flex-end;
   width: 350px;
-  margin-left: 1100px;
+  margin-left: 1550px;
 }
 
 .logged {
@@ -38,16 +42,21 @@
   justify-content: space-between;
   align-items: flex-end;
   width: 500px;
-  margin-left: 930px;
+  margin-left: 1400px;
 }
 
-
+.woo {
+  height: 500px;
+  width: 800px;
+  margin-bottom: 2em;
+}
 
 .center {
   margin-top: 2em;
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
   justify-content: center;
 }
 
