@@ -77,6 +77,13 @@ app.get('/profile', isLoggedIn, (req, res) => {
   res.render('profile', { id, name, email });
 });
 
+app.use(function(req, res, next){
+  res.status(404).json({
+    url: req.originalUrl,
+    message: "Sorry, that page does not exist",
+  })
+})
+
 
 // Server Hosting
 

@@ -17,8 +17,12 @@ router.get('/favorites', (req,res) => {
     res.render('auth/favorites')
 })
 
-router.get('/search', (req, res) => {
-    res.render('auth/search')
+router.get('/country', (req, res) => {
+    res.render('auth/country')
+})
+
+router.get('/capital', (req, res) => {
+    res.render('auth/capital')
 })
 
 router.get('/logout', (req, res) => {
@@ -67,5 +71,14 @@ router.post('/signup', (req, res) => {
     successFlash: 'Success! You have logged in!',
     failureFlash: 'Either email or password is incorrect' 
   }));
+
+  router.post('/country', (req, res) => {
+    res.redirect('https://restcountries.eu/rest/v2/name/' + req.body.userSearchInput)
+  })
+
+  router.post('/capital', (req, res) => {
+    res.redirect('https://restcountries.eu/rest/v2/capital/' + req.body.userSearchInput)
+  })
+
 
 module.exports = router;
